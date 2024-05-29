@@ -5,16 +5,15 @@ const comparison = (fraction, integers, necessaryTimes) => {
 }
 
 const updateanswer = (id, fraction, integers, necessaryTimesId) => {
-    const necessaryTimes = document.getElementById(necessaryTimesId).value
-    document.getElementById(id).textContent = comparison(fraction, integers, necessaryTimes) ? "Correto" : "Errado";
-}   
+    const necessaryTimes = document.getElementById(necessaryTimesId).value;
 
-document.getElementById("necessaryTimes01").addEventListener("input", () => updateanswer("response01", "1/2", 1, "necessaryTimes01"));
-document.getElementById("necessaryTimes02").addEventListener("input", () => updateanswer("response02", "1/3", 1, "necessaryTimes02"));
-document.getElementById("necessaryTimes03").addEventListener("input", () => updateanswer("response03", "1/4", 1, "necessaryTimes03"));
-document.getElementById("necessaryTimes04").addEventListener("input", () => updateanswer("response04", "1/5", 1, "necessaryTimes04"));
-document.getElementById("necessaryTimes05").addEventListener("input", () => updateanswer("response05", "1/6", 1, "necessaryTimes05"));
-console.log(document.getElementById("necessaryTimes06"));
+// <<<<<<< main
+// document.getElementById("necessaryTimes01").addEventListener("input", () => updateanswer("response01", "1/2", 1, "necessaryTimes01"));
+// document.getElementById("necessaryTimes02").addEventListener("input", () => updateanswer("response02", "1/3", 1, "necessaryTimes02"));
+// document.getElementById("necessaryTimes03").addEventListener("input", () => updateanswer("response03", "1/4", 1, "necessaryTimes03"));
+// document.getElementById("necessaryTimes04").addEventListener("input", () => updateanswer("response04", "1/5", 1, "necessaryTimes04"));
+// document.getElementById("necessaryTimes05").addEventListener("input", () => updateanswer("response05", "1/6", 1, "necessaryTimes05"));
+// console.log(document.getElementById("necessaryTimes06"));
 // document.getElementById("necessaryTimes06").addEventListener("input", () => updateanswer("response06", "1/2", 2, "necessaryTimes06"));
 // document.getElementById("necessaryTimes07").addEventListener("input", () => updateanswer("response07", "1/2", 3, "necessaryTimes07"));
 // document.getElementById("necessaryTimes08").addEventListener("input", () => updateanswer("response08", "1/2", 4, "necessaryTimes08"));
@@ -50,3 +49,19 @@ console.log(document.getElementById("necessaryTimes06"));
 // document.getElementById("necessaryTimes33").addEventListener("input", () => updateanswer("response33", "1/2", 1, "necessaryTimes33"));
 // document.getElementById("necessaryTimes34").addEventListener("input", () => updateanswer("response34", "1/3", 1, "necessaryTimes34"));
 // document.getElementById("necessaryTimes35").addEventListener("input", () => updateanswer("response35", "1/4", 1, "necessaryTimes35"));
+// =======
+    if (comparison(fraction, integers, necessaryTimes)) {
+        document.getElementById(id).textContent = "Correto";
+    } else {
+        document.getElementById(id).textContent = "Errado";
+    }
+}
+
+function firstCheck() {
+    updateanswer("response01", "1/2", 1, "necessaryTimes01");
+    updateanswer("response02", "1/3", 1, "necessaryTimes02");
+    updateanswer("response03", "1/4", 1, "necessaryTimes03");
+    updateanswer("response04", "1/5", 1, "necessaryTimes04");
+    updateanswer("response05", "1/6", 1, "necessaryTimes05");
+}
+// >>>>>>> main
