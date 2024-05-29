@@ -3,10 +3,13 @@
      padding: 0;
 }
 
-.container {
-     width: 50vw;
-     height: 50vh;
-     padding: 50px;
-     border: 1px solid black;
+#container {
+     padding: 20px;
+     border: 1px solid rgba(78, 78, 78, 0.192);
      border-radius: 10px;
+     margin-bottom: 10px;
+}
+
+.resposta {
+     width: 200px;
 }
