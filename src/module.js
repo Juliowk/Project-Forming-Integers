@@ -18,8 +18,11 @@ const updateanswer = (id, fraction, integers, necessaryTimesId) => {
 
 const scores = () => {
      if (localStorage.getItem("temporaryScore") == 5) {
+
           let score = parseInt(localStorage.getItem('score') || 0);
           localStorage.setItem("score", score + 20);
+
+          nextButton();
 
           clearScores();
      } else {
@@ -38,6 +41,10 @@ const clearScores = (clearAll = false) => {
 
 const showScore = () => {
      document.getElementById("score").textContent = `Pontuação: ${localStorage.getItem('score') || 0}`;
+}
+
+const nextButton = () => {
+     document.getElementById("divButtons").innerHTML = '<button class=" btn btn-success">Vá para o proximo</button>';
 }
 
 export { comparison, updateanswer, scores, clearScores, showScore };
