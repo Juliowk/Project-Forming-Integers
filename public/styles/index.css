@@ -10,6 +10,11 @@
      margin-bottom: 10px;
 }
 
+.banner {
+     padding: 0;
+     border: none;
+}
+
 .resposta {
      width: 300px;
 }
@@ -17,3 +22,10 @@
 .form-control {
      text-align: center;
 }
+
+.page-link {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 

@@ -39,6 +39,9 @@ const clearScores = (clearAll = false) => {
 
 const showScore = () => {
      document.getElementById("score").textContent = `Pontuação: ${localStorage.getItem('score') || 0}`;
+     console.log(`Pontuação ${localStorage.getItem('score')}`);
 }
+
+
 
 export { comparison, updateanswer, scores, clearScores, showScore };

@@ -12,7 +12,7 @@ function firstCheck() {
      if (Number(localStorage.getItem('score')) < 20) {
           scores();
      }
-
+     
      showScore();
 }
 

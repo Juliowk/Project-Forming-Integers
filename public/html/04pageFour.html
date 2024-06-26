@@ -105,17 +105,17 @@
           <nav>
                <ul class="pagination justify-content-center">
                     <li class="page-item">
-                         <a class="page-link" href="./pageThree.html" tabindex="-1">Anterior</a>
+                         <a class="page-link" href="./03pageThree.html" tabindex="-1">Anterior</a>
                     </li>
-                    <li class="page-item"><a class="page-link" href="./pageOne.html">1</a></li>
-                    <li class="page-item"><a class="page-link" href="./pageTwo.html">2</a></li>
-                    <li class="page-item"><a class="page-link" href="./pageThree.html">3</a></li>
-                    <li class="page-item active"><a class="page-link" href="./pageFour.html">4</a></li>
-                    <li class="page-item"><a class="page-link" href="./pageFive.html">5</a></li>
-                    <li class="page-item"><a class="page-link" href="./pageSix.html">6</a></li>
-                    <li class="page-item"><a class="page-link" href="./pageSeven.html">7</a></li>
+                    <li class="page-item"><a class="page-link" href="./01pageOne.html">1</a></li>
+                    <li class="page-item"><a class="page-link" href="./02pageTwo.html">2</a></li>
+                    <li class="page-item"><a class="page-link" href="./03pageThree.html">3</a></li>
+                    <li class="page-item active"><a class="page-link" href="./04pageFour.html">4</a></li>
+                    <li class="page-item"><a class="page-link" href="./05pageFive.html">5</a></li>
+                    <li class="page-item"><a class="page-link" href="./06pageSix.html">6</a></li>
+                    <li class="page-item"><a class="page-link" href="./07pageSeven.html">7</a></li>
                     <li class="page-item">
-                         <a class="page-link" href="./pageFive.html">Próximo</a>
+                         <a class="page-link" href="./05pageFive.html">Próximo</a>
                     </li>
                </ul>
           </nav>
@@ -139,3 +139,14 @@
 </body>
 
 </html>
+
+<script>
+     const updateScore = () => {
+          const score = localStorage.getItem('score') || 0;
+          document.getElementById('score').textContent = `Pontuação: ${score}`;
+     };
+
+     document.addEventListener("DOMContentLoaded", (event) => {
+          updateScore();
+     });
+</script>
