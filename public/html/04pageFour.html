@@ -16,7 +16,13 @@
      <title>Project-Forming-Integers</title>
 </head>
 
-<body class="container" id="container">
+<body class="container mt-2" id="container">
+
+     <div id="alert" class="d-none alert alert-success" role="alert">
+          Parabéns, você acertou tudo e já recebeu sua pontuação! Vá para o próximo desafio, e que a força esteja
+          com você, meu jovem padawan...
+     </div>
+
      <div>
 
           <div>
@@ -99,7 +105,7 @@
           </form>
 
           <div class="text-center mb-4 mt-3">
-               <button class="btn" id="fourCheck">Verificar</button>
+               <button class="btn" id="fourCheck" onclick="Enablebuttons(80, 'link05')">Verificar</button>
           </div>
 
           <nav>
@@ -111,10 +117,10 @@
                     <li class="page-item"><a class="page-link" href="./02pageTwo.html">2</a></li>
                     <li class="page-item"><a class="page-link" href="./03pageThree.html">3</a></li>
                     <li class="page-item active"><a class="page-link" href="./04pageFour.html">4</a></li>
-                    <li class="page-item"><a class="page-link" href="./05pageFive.html">5</a></li>
-                    <li class="page-item"><a class="page-link" href="./06pageSix.html">6</a></li>
-                    <li class="page-item"><a class="page-link" href="./07pageSeven.html">7</a></li>
-                    <li class="page-item">
+                    <li id="link05" class="page-item disabled"><a class="page-link" href="./05pageFive.html">5</a></li>
+                    <li class="page-item disabled"><a class="page-link" href="./06pageSix.html">6</a></li>
+                    <li class="page-item disabled"><a class="page-link" href="./07pageSeven.html">7</a></li>
+                    <li id="linkNext" class="page-item disabled">
                          <a class="page-link" href="./05pageFive.html">Próximo</a>
                     </li>
                </ul>
@@ -123,7 +129,9 @@
      </div>
 
      <!-- JavaScripts -->
-     <script type="module" src="../src/operations.js" defer></script>
+     <script type="module" src="../../src/operations.js" defer></script>
+     <script type="module" src="../../src/controllers.js" defer></script>
+
 
      <!-- JavaScript (Opcional) -->
      <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
@@ -140,11 +148,8 @@
 
 </html>
 
-<script>
-     const updateScore = () => {
-          const score = localStorage.getItem('score') || 0;
-          document.getElementById('score').textContent = `Pontuação: ${score}`;
-     };
+<script type="module">
+     import { updateScore } from '../../src/controllers.js';
 
      document.addEventListener("DOMContentLoaded", (event) => {
           updateScore();
