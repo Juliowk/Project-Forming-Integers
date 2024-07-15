@@ -1,7 +1,7 @@
 import { updateanswer, scores, clearScores, showScore } from "./module.js"
 
 function firstCheck() {
-     clearScores(true);
+     clearScores();
 
      updateanswer("response01", "1/2", 1, "necessaryTimes01");
      updateanswer("response02", "1/3", 1, "necessaryTimes02");
